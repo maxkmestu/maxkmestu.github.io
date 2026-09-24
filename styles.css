@@ -1,14 +1,19 @@
-:root { color-scheme: dark; background: #141414; }
+:root { color-scheme: dark; background: #080808; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: #141414; color: #fff; font-family: Arial, sans-serif; }
-.portfolio { position: relative; width: 100%; max-width: 1766px; margin: auto; }
+body { margin: 0; min-width: 320px; background: #080808; color: #fff; font-family: Arial, sans-serif; }
+.portfolio { position: relative; width: 100%; max-width: 1766px; margin-inline: auto; }
 .portfolio picture, .portfolio img { display: block; width: 100%; height: auto; }
-.portfolio img { background: #141414; }
-.hotspot { position: absolute; z-index: 1; }
-.hotspot--qr { left: 68.6%; top: 13.3%; width: 12.9%; height: 1.9%; }
-.hotspot--telegram, .hotspot--email { top: 96.98%; height: 1.05%; }
-.hotspot--telegram { left: 5.7%; width: 14.6%; }
-.hotspot--email { left: 20.8%; width: 21.7%; }
-.hotspot:focus-visible { outline: 3px solid #fff; border-radius: 6px; }
+.portfolio img { background: #080808; }
+.hotspot { position: absolute; z-index: 1; display: block; cursor: pointer; }
+.hotspot--qr { left: 79.15%; top: 11.04%; width: 5.75%; height: 1.48%; }
+.hotspot--telegram-top { left: 85.7%; top: 11.19%; width: 6.5%; height: 0.63%; }
+.hotspot--telegram, .hotspot--email { top: 96.91%; height: 1.07%; }
+.hotspot--telegram { left: 7.2%; width: 16.7%; }
+.hotspot--email { left: 24.2%; width: 25.1%; }
+.hotspot:focus-visible, .mobile-contact:focus-visible { outline: 3px solid #fff; outline-offset: 2px; border-radius: 6px; }
+.mobile-contact { display: none; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 700px) {
+  .mobile-contact { display: block; position: fixed; z-index: 2; right: 14px; bottom: max(14px, env(safe-area-inset-bottom)); padding: 13px 17px; border: 1px solid #454545; border-radius: 999px; background: #171717ed; color: #fff; font-size: 13px; font-weight: 700; line-height: 1; text-decoration: none; box-shadow: 0 4px 20px #0009; }
+}
